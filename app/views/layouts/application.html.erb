@@ -7,7 +7,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="https://kit.fontawesome.com/38dc52f0f7.js" crossorigin="anonymous"></script>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
     <!-- Bootstrap 5.3 CSS -->
@@ -17,12 +19,18 @@
   </head>
 
   <body>
-
     <!-- ナビゲーション  -->
     <header class="shadow-sm">
-      <%= render 'navbar' %>
+      <%= render 'layouts/navbar' %>
     </header>
-
     <%= yield %>
+
+    <footer class="footer">
+      <div class="container">
+        <hr>
+        ながの Cafe.<br>
+        お問い合わせは、<a href="mailto:koguchi.e915@gmail.com"><b><i class="fa-regular fa-envelope"></i>こちら</b></a>まで。
+      </div>
+    </footer>
   </body>
 </html>
